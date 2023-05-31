@@ -14,6 +14,10 @@
 		421375432A27A58E003CB81B /* ApiLocalStorageVideoRecorder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 421375412A27A58E003CB81B /* ApiLocalStorageVideoRecorder.xcdatamodeld */; };
 		421375452A27A590003CB81B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421375442A27A590003CB81B /* Assets.xcassets */; };
 		421375482A27A590003CB81B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421375462A27A590003CB81B /* LaunchScreen.storyboard */; };
+		421375512A27AD45003CB81B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421375502A27AD45003CB81B /* NetworkManager.swift */; };
+		421375542A27AEFE003CB81B /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421375532A27AEFE003CB81B /* PlayerModel.swift */; };
+		421375572A27B86C003CB81B /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421375562A27B86C003CB81B /* PlayerManager.swift */; };
+		4213755B2A27C37D003CB81B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213755A2A27C37D003CB81B /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		421375442A27A590003CB81B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		421375472A27A590003CB81B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		421375492A27A590003CB81B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		421375502A27AD45003CB81B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		421375532A27AEFE003CB81B /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		421375562A27B86C003CB81B /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		4213755A2A27C37D003CB81B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 		421375372A27A58E003CB81B /* ApiLocalStorageVideoRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				421375592A27C366003CB81B /* CoreData */,
+				421375582A27C248003CB81B /* Pages */,
+				421375552A27B854003CB81B /* Managers */,
+				421375522A27AED8003CB81B /* Model */,
 				421375382A27A58E003CB81B /* AppDelegate.swift */,
 				4213753A2A27A58E003CB81B /* SceneDelegate.swift */,
 				4213753C2A27A58E003CB81B /* ViewController.swift */,
@@ -68,6 +80,38 @@
 				421375412A27A58E003CB81B /* ApiLocalStorageVideoRecorder.xcdatamodeld */,
 			);
 			path = ApiLocalStorageVideoRecorder;
+			sourceTree = "<group>";
+		};
+		421375522A27AED8003CB81B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				421375532A27AEFE003CB81B /* PlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		421375552A27B854003CB81B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				421375502A27AD45003CB81B /* NetworkManager.swift */,
+				421375562A27B86C003CB81B /* PlayerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		421375582A27C248003CB81B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		421375592A27C366003CB81B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4213755A2A27C37D003CB81B /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421375542A27AEFE003CB81B /* PlayerModel.swift in Sources */,
 				421375432A27A58E003CB81B /* ApiLocalStorageVideoRecorder.xcdatamodeld in Sources */,
 				4213753D2A27A58E003CB81B /* ViewController.swift in Sources */,
+				421375572A27B86C003CB81B /* PlayerManager.swift in Sources */,
+				421375512A27AD45003CB81B /* NetworkManager.swift in Sources */,
 				421375392A27A58E003CB81B /* AppDelegate.swift in Sources */,
+				4213755B2A27C37D003CB81B /* CoreDataManager.swift in Sources */,
 				4213753B2A27A58E003CB81B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
