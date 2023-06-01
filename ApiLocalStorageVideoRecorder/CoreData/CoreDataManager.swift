@@ -71,24 +71,12 @@ class CoreDataManager {
 
                 if let shotEntities = playerEntity.shots as? Set<ShotEntity> {
                     for shotEntity in shotEntities {
-                        
                         var id = shotEntity.id
                         var point = Int(shotEntity.point)
                         var segment = Int(shotEntity.segment)
                         var inOut = shotEntity.inOut
                         var posX = shotEntity.posX
                         var posY = shotEntity.posY
-                        
-                        
-//                        guard let id = shotEntity.id,
-//                              let point = shotEntity.point,
-//                              let segment = shotEntity.segment,
-//                              let inOut = shotEntity.inOut,
-//                              let posX = shotEntity.posX,
-//                              let posY = shotEntity.posY else {
-//                            continue
-//                        }
-                        
                         
                         let shot = Shot(_id: id ?? "", point: point, segment: segment, InOut: inOut, ShotPosX: posX, ShotPosY: posY)
                         shots.append(shot)
