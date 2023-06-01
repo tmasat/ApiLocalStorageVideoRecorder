@@ -14,10 +14,14 @@ class PlayersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setTableView()
         setViewModel()
         fetchPlayers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        checkPlayerUpdates()
     }
     
     private func setTableView() {
@@ -28,10 +32,15 @@ class PlayersViewController: UIViewController {
     
     private func setViewModel() {
         playersViewModel = PlayersViewModel(coreDataManager: CoreDataManager())
+        playersViewModel?.delegate = self
     }
     
     private func fetchPlayers() {
         playersViewModel?.fetchPlayers()
+    }
+    
+    private func checkPlayerUpdates() {
+        playersViewModel?.isUpdateNeeded()
     }
     
     

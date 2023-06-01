@@ -15,13 +15,24 @@ class PlayersViewModel {
     private let coreDataManager: CoreDataManager
     private var players: [Player] = []
     weak var delegate: PlayersViewModelDelegate?
+    private let updatePlayerManager = UpdatePlayerManager(coreDataManager: CoreDataManager(), playerManager: PlayerManager())
     
     init(coreDataManager: CoreDataManager) {
         self.coreDataManager = coreDataManager
     }
     
+    
+    func isUpdateNeeded() {
+        
+        guard self.players.count == 0 else { return }
+        
+        updatePlayerManager.updatePlayers {
+            self.fetchPlayers()
+        }
+    }
+    
     func fetchPlayers() {
-        players = coreDataManager.fetchPlayers()
+        self.players = coreDataManager.fetchPlayers()
         delegate?.didFetchPlayers()
     }
     

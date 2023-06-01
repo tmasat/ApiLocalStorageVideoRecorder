@@ -7,55 +7,55 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7D6F9767-28CC-4ABC-8AFF-98DBF86DB0A1"
+            uuid = "3D44CE5F-BDF1-46FA-8CB1-25829C3C0630"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+            filePath = "ApiLocalStorageVideoRecorder/Managers/PlayerManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getPlayerData(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "93E55398-323F-4DE6-844E-0CB62E9E3105"
+            uuid = "073FB9F7-B480-4E53-9DFB-9DA3F90DF804"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "93E55398-323F-4DE6-844E-0CB62E9E3105 - ea10cb3aa9a5b695"
+                  uuid = "073FB9F7-B480-4E53-9DFB-9DA3F90DF804 - 21c134a6d7d7877d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
                   moduleName = "ApiLocalStorageVideoRecorder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1058">
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "86">
                </Location>
                <Location
-                  uuid = "93E55398-323F-4DE6-844E-0CB62E9E3105 - ea10cb3aa9a5b6b4"
+                  uuid = "073FB9F7-B480-4E53-9DFB-9DA3F90DF804 - 21c134a6d7d784f9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
                   moduleName = "ApiLocalStorageVideoRecorder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
@@ -63,7 +63,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
                   endingLineNumber = "51"
-                  offsetFromSymbolStart = "1058">
+                  offsetFromSymbolStart = "86">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -71,7 +71,291 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B975C23D-9C34-4827-A051-50E297E34A2E"
+            uuid = "1E5E977A-3E8A-47DB-A191-49495BD98496"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E5E977A-3E8A-47DB-A191-49495BD98496 - ea10cb3aa9a5b6eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "1E5E977A-3E8A-47DB-A191-49495BD98496 - ea10cb3aa9a5b6eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "964">
+               </Location>
+               <Location
+                  uuid = "1E5E977A-3E8A-47DB-A191-49495BD98496 - ea10cb3aa9a5b66f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "1E5E977A-3E8A-47DB-A191-49495BD98496 - ea10cb3aa9a5b66f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "964">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFE73F66-114C-427E-B0D2-E7BE15A4956B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "didFetchPlayers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AFE73F66-114C-427E-B0D2-E7BE15A4956B - 3d2a369342518ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.didFetchPlayers() -&gt; ()"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  uuid = "AFE73F66-114C-427E-B0D2-E7BE15A4956B - 18b87ad17c080c21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in ApiLocalStorageVideoRecorder.PlayersViewController.didFetchPlayers() -&gt; ()"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "33">
+               </Location>
+               <Location
+                  uuid = "AFE73F66-114C-427E-B0D2-E7BE15A4956B - 3d2a36934251826"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewController.didFetchPlayers() -&gt; ()"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  uuid = "AFE73F66-114C-427E-B0D2-E7BE15A4956B - 18b87ad17c080cbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in ApiLocalStorageVideoRecorder.PlayersViewController.didFetchPlayers() -&gt; ()"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26C1AE21-2660-47DB-B36E-01560576BA60"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "didFetchPlayers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "26C1AE21-2660-47DB-B36E-01560576BA60 - 18b87ad17c080c21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in ApiLocalStorageVideoRecorder.PlayersViewController.didFetchPlayers() -&gt; ()"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "33">
+               </Location>
+               <Location
+                  uuid = "26C1AE21-2660-47DB-B36E-01560576BA60 - 18b87ad17c080cbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in ApiLocalStorageVideoRecorder.PlayersViewController.didFetchPlayers() -&gt; ()"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D4657BA-AB1C-4BA1-B709-D11262843FE4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "fetchPlayers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "108ECF79-9384-4496-9AD9-4E80EF0E1C07"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "setViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "326689FB-A037-4FC8-8F86-E86C2246B024"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "fetchPlayers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "326689FB-A037-4FC8-8F86-E86C2246B024 - 486a18cf6fc3568a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewModel.fetchPlayers() -&gt; ()"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "326689FB-A037-4FC8-8F86-E86C2246B024 - 486a18cf6fc35467"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewModel.fetchPlayers() -&gt; ()"
+                  moduleName = "ApiLocalStorageVideoRecorder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F419C68-59E2-4D84-B9E9-4A435D5A1D62"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -80,30 +364,30 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "getPlayer(at:)"
+            landmarkName = "fetchPlayers()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B975C23D-9C34-4827-A051-50E297E34A2E - 72dce60e8fc93430"
+                  uuid = "0F419C68-59E2-4D84-B9E9-4A435D5A1D62 - 486a18cf6fc356a9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewModel.getPlayer(at: Swift.Int) -&gt; Swift.Optional&lt;ApiLocalStorageVideoRecorder.PlayerEntity&gt;"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewModel.fetchPlayers() -&gt; ()"
                   moduleName = "ApiLocalStorageVideoRecorder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "236">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "146">
                </Location>
                <Location
-                  uuid = "B975C23D-9C34-4827-A051-50E297E34A2E - 170290d3a507a24e"
+                  uuid = "0F419C68-59E2-4D84-B9E9-4A435D5A1D62 - 486a18cf6fc35406"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewModel.getPlayer(at: Swift.Int) -&gt; Swift.Optional&lt;ApiLocalStorageVideoRecorder.Player&gt;"
+                  symbolName = "ApiLocalStorageVideoRecorder.PlayersViewModel.fetchPlayers() -&gt; ()"
                   moduleName = "ApiLocalStorageVideoRecorder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tugberkmasat/Desktop/iOS/ApiLocalStorageVideoRecorder/ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewModel.swift"
@@ -111,7 +395,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
                   endingLineNumber = "36"
-                  offsetFromSymbolStart = "268">
+                  offsetFromSymbolStart = "146">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -119,16 +403,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0C4C1AB3-1F68-4AEF-A32B-B0035C316DF5"
+            uuid = "678D0756-1B07-4251-9C8A-6353E7B2DAEE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/Cells/PlayersTableViewCell.swift"
+            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "setCell(with:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "isUpdateNeeded()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B2E6973-DA7D-4F20-9DED-D6716FD90FDC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiLocalStorageVideoRecorder/Pages/Players/PlayersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "isUpdateNeeded()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
