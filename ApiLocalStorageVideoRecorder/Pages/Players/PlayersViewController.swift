@@ -25,6 +25,7 @@ class PlayersViewController: UIViewController {
     }
     
     private func setTableView() {
+        playersTableView.delegate = self
         playersTableView.dataSource = self
         playersTableView.register(UINib(nibName: "PlayersTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayersCell")
         
@@ -46,7 +47,7 @@ class PlayersViewController: UIViewController {
     
 }
 
-extension PlayersViewController: UITableViewDataSource {
+extension PlayersViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playersViewModel?.numberOfPlayers() ?? 0
     }
@@ -59,6 +60,17 @@ extension PlayersViewController: UITableViewDataSource {
         
         cell.setCell(with: player)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let player = playersViewModel?.getPlayer(at: indexPath.row) else { return }
+        
+        if let shotsViewController = UIStoryboard(name: "Shots", bundle: nil).instantiateViewController(withIdentifier: "ShotsViewController") as? ShotsViewController {
+            shotsViewController.shotsViewModel = ShotsViewModel()
+            shotsViewController.shotsViewModel?.updateShots(player.shots)
+            navigationController?.pushViewController(shotsViewController, animated: true)
+        }
+        
     }
     
     
