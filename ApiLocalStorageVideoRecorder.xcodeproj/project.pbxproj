@@ -21,6 +21,7 @@
 		421375622A27FE4B003CB81B /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421375612A27FE4B003CB81B /* Players.storyboard */; };
 		421375662A27FF64003CB81B /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421375642A27FF64003CB81B /* PlayersTableViewCell.swift */; };
 		421375672A27FF64003CB81B /* PlayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421375652A27FF64003CB81B /* PlayersTableViewCell.xib */; };
+		421375692A28282B003CB81B /* UpdatePlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421375682A28282B003CB81B /* UpdatePlayerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		421375612A27FE4B003CB81B /* Players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Players.storyboard; sourceTree = "<group>"; };
 		421375642A27FF64003CB81B /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		421375652A27FF64003CB81B /* PlayersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersTableViewCell.xib; sourceTree = "<group>"; };
+		421375682A28282B003CB81B /* UpdatePlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePlayerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				421375502A27AD45003CB81B /* NetworkManager.swift */,
 				421375562A27B86C003CB81B /* PlayerManager.swift */,
+				421375682A28282B003CB81B /* UpdatePlayerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				421375542A27AEFE003CB81B /* PlayerModel.swift in Sources */,
+				421375692A28282B003CB81B /* UpdatePlayerManager.swift in Sources */,
 				421375432A27A58E003CB81B /* ApiLocalStorageVideoRecorder.xcdatamodeld in Sources */,
 				421375572A27B86C003CB81B /* PlayerManager.swift in Sources */,
 				421375512A27AD45003CB81B /* NetworkManager.swift in Sources */,

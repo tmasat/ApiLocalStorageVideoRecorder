@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Network
 
 class NetworkManager {
     enum NetworkError: Error {

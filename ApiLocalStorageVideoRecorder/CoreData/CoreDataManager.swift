@@ -10,7 +10,7 @@ import CoreData
 
 class CoreDataManager {
     static let shared = CoreDataManager()
-
+    
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "ApiLocalStorageVideoRecorder")
         container.loadPersistentStores(completionHandler: { (_, error) in
@@ -20,11 +20,11 @@ class CoreDataManager {
         })
         return container
     }()
-
+    
     private var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
-
+    
     func saveContext() {
         if context.hasChanges {
             do {
@@ -35,40 +35,42 @@ class CoreDataManager {
             }
         }
     }
-
-    func savePlayerAndShots(name: String, surname: String, shots: [Shot]) {
-        let player = PlayerEntity(context: context)
-        player.name = name
-        player.surname = surname
-
-        for shot in shots {
-            let shotEntity = ShotEntity(context: context)
-            shotEntity.point = Int32(shot.point)
-            shotEntity.segment = Int32(shot.segment)
-            shotEntity.id = shot._id
-            shotEntity.inOut = shot.InOut
-            shotEntity.posX = shot.ShotPosX
-            shotEntity.posY = shot.ShotPosY
-            player.addToShots(shotEntity)
+    
+    func savePlayersAndShots(players: [Player]) {
+        for player in players {
+            let playerEntity = PlayerEntity(context: context)
+            playerEntity.name = player.name
+            playerEntity.surname = player.surname
+            
+            for shot in player.shots {
+                let shotEntity = ShotEntity(context: context)
+                shotEntity.point = Int32(shot.point)
+                shotEntity.segment = Int32(shot.segment)
+                shotEntity.id = shot._id
+                shotEntity.inOut = shot.InOut
+                shotEntity.posX = shot.ShotPosX
+                shotEntity.posY = shot.ShotPosY
+                playerEntity.addToShots(shotEntity)
+            }
         }
-
+        
         saveContext()
     }
-
+    
     func fetchPlayers() -> [Player] {
         let fetchRequest: NSFetchRequest<PlayerEntity> = PlayerEntity.fetchRequest()
         fetchRequest.relationshipKeyPathsForPrefetching = ["shots"]
-
+        
         do {
             let playerEntities = try context.fetch(fetchRequest)
             var players: [Player] = []
-
+            
             for playerEntity in playerEntities {
                 guard let name = playerEntity.name, let surname = playerEntity.surname else {
                     continue
                 }
                 var shots: [Shot] = []
-
+                
                 if let shotEntities = playerEntity.shots as? Set<ShotEntity> {
                     for shotEntity in shotEntities {
                         var id = shotEntity.id
@@ -82,18 +84,43 @@ class CoreDataManager {
                         shots.append(shot)
                     }
                 }
-
+                
                 let player = Player(name: name, surname: surname, shots: shots)
                 players.append(player)
             }
-
+            
             return players
         } catch {
             print("Failed to fetch players: \(error)")
             return []
         }
     }
-
+    
+    func deleteAllPlayers() {
+        let fetchRequest: NSFetchRequest<PlayerEntity> = PlayerEntity.fetchRequest()
+        
+        do {
+            let playerEntities = try context.fetch(fetchRequest)
+            
+            for playerEntity in playerEntities {
+                context.delete(playerEntity)
+            }
+            
+            saveContexts()
+            print("All players deleted successfully.")
+        } catch {
+            print("Failed to delete players: \(error)")
+        }
+    }
+    
+    func saveContexts() {
+        do {
+            try context.save()
+        } catch {
+            print("Failed to save context: \(error)")
+        }
+    }
+    
     
     
 }
