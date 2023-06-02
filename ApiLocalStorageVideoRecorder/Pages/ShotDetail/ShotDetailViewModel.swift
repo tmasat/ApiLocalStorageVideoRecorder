@@ -14,6 +14,7 @@ class ShotDetailViewModel: NSObject {
     var movieOutput: AVCaptureMovieFileOutput!
     var isRecording = false
     private let videoManager = VideoManager()
+    var shot: Shot?
     
     weak var delegate: ShotDetailViewModelDelegate?
     
@@ -22,12 +23,12 @@ class ShotDetailViewModel: NSObject {
         setupCamera()
     }
     
-    func testFunc() {
-        if let videoURL = videoManager.checkForExistingVideo() {
-            delegate?.playVideo(videoURL)
-        } else {
-            delegate?.setCameraView()
-        }
+    func updateShot(_ shot: Shot) {
+        self.shot = shot
+    }
+    
+    func setShotData() -> Shot? {
+        return self.shot
     }
     
     private func setupCamera() {
@@ -56,7 +57,7 @@ class ShotDetailViewModel: NSObject {
     }
     
     func startRecording() {
-        guard let outputFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("test.mp4") else {
+        guard let outputFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("\(shot!._id).mp4") else {
             return
         }
         
@@ -69,16 +70,14 @@ class ShotDetailViewModel: NSObject {
         isRecording = false
     }
     
-    private func checkForExistingVideo() {
-        if let videoURL = videoManager.checkForExistingVideo() {
+     func checkForExistingVideo() {
+         if let videoURL = videoManager.checkForExistingVideo(String(shot!._id)) {
             delegate?.playVideo(videoURL)
-        } else {
-            setupCamera()
         }
     }
     
     func saveVideoToDocumentsFolder(_ videoURL: URL) {
-        if !videoManager.saveVideoToDocumentsFolder(videoURL) {
+        if !videoManager.saveVideoToDocumentsFolder(videoURL, String(shot!._id)) {
             print("Error saving video to documents folder.")
         }
     }
@@ -98,5 +97,4 @@ extension ShotDetailViewModel: AVCaptureFileOutputRecordingDelegate {
 protocol ShotDetailViewModelDelegate: AnyObject {
     func didFinishRecording(_ videoURL: URL)
     func playVideo(_ videoURL: URL)
-    func setCameraView()
 }

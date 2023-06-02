@@ -43,15 +43,9 @@ extension ShotsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let shotDetailViewController = UIStoryboard(name: "ShotDetail", bundle: nil).instantiateViewController(withIdentifier: "ShotDetailViewController") as? ShotDetailViewController {
+            shotDetailViewController.viewModel = ShotDetailViewModel()
+            shotDetailViewController.viewModel?.updateShot((shotsViewModel?.getShot(at: indexPath.row))!)
             navigationController?.pushViewController(shotDetailViewController, animated: true)
         }
     }
 }
-/*
- 
- f let shotsViewController = UIStoryboard(name: "Shots", bundle: nil).instantiateViewController(withIdentifier: "ShotsViewController") as? ShotsViewController {
-     shotsViewController.shotsViewModel = ShotsViewModel()
-     shotsViewController.shotsViewModel?.updateShots(player.shots)
-     navigationController?.pushViewController(shotsViewController, animated: true)
- }
- */
