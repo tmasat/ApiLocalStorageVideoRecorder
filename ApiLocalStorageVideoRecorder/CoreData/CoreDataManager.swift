@@ -60,41 +60,44 @@ class CoreDataManager {
     func fetchPlayers() -> [Player] {
         let fetchRequest: NSFetchRequest<PlayerEntity> = PlayerEntity.fetchRequest()
         fetchRequest.relationshipKeyPathsForPrefetching = ["shots"]
-        
+
         do {
             let playerEntities = try context.fetch(fetchRequest)
             var players: [Player] = []
-            
+
             for playerEntity in playerEntities {
                 guard let name = playerEntity.name, let surname = playerEntity.surname else {
                     continue
                 }
                 var shots: [Shot] = []
-                
+
                 if let shotEntities = playerEntity.shots as? Set<ShotEntity> {
-                    for shotEntity in shotEntities {
+                    let sortedShotEntities = shotEntities.sorted(by: { $0.point < $1.point })
+
+                    for shotEntity in sortedShotEntities {
                         var id = shotEntity.id
                         var point = Int(shotEntity.point)
                         var segment = Int(shotEntity.segment)
                         var inOut = shotEntity.inOut
                         var posX = shotEntity.posX
                         var posY = shotEntity.posY
-                        
+
                         let shot = Shot(_id: id ?? "", point: point, segment: segment, InOut: inOut, ShotPosX: posX, ShotPosY: posY)
                         shots.append(shot)
                     }
                 }
-                
+
                 let player = Player(name: name, surname: surname, shots: shots)
                 players.append(player)
             }
-            
+
             return players
         } catch {
             print("Failed to fetch players: \(error)")
             return []
         }
     }
+
     
     func deleteAllPlayers() {
         let fetchRequest: NSFetchRequest<PlayerEntity> = PlayerEntity.fetchRequest()
