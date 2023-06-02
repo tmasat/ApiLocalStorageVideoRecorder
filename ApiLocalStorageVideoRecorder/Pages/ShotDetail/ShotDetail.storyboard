@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shot Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ShotDetailViewController" id="Y6W-OH-hqX" customClass="ShotDetailViewController" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG5-Ze-3Yd" userLabel="CameraView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="702"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCy-Xg-0Kn">
+                                <rect key="frame" x="0.0" y="702" width="393" height="150"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RECORD"/>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c5k-dQ-Peg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UG5-Ze-3Yd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="08W-Lw-RFm"/>
+                            <constraint firstItem="UG5-Ze-3Yd" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="KgN-RF-mq7"/>
+                            <constraint firstAttribute="bottom" secondItem="NCy-Xg-0Kn" secondAttribute="bottom" id="PWe-Q1-E4m"/>
+                            <constraint firstItem="NCy-Xg-0Kn" firstAttribute="top" secondItem="UG5-Ze-3Yd" secondAttribute="bottom" id="Ph2-wO-UPO"/>
+                            <constraint firstAttribute="trailing" secondItem="NCy-Xg-0Kn" secondAttribute="trailing" id="Qap-EY-X9x"/>
+                            <constraint firstAttribute="trailing" secondItem="UG5-Ze-3Yd" secondAttribute="trailing" id="ZAZ-3O-XMU"/>
+                            <constraint firstAttribute="bottom" secondItem="UG5-Ze-3Yd" secondAttribute="bottom" constant="150" id="aEq-Tw-RRQ"/>
+                            <constraint firstItem="NCy-Xg-0Kn" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="dDm-9w-4xg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="UG5-Ze-3Yd" id="Nxd-DV-tUx"/>
+                        <outlet property="recordButton" destination="NCy-Xg-0Kn" id="oW2-bJ-DaE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
