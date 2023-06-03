@@ -19,13 +19,14 @@ class ShotsViewController: UIViewController {
     }
     
     private func setTableView() {
+        shotsTableView.delegate = self
         shotsTableView.dataSource = self
         shotsTableView.register(UINib(nibName: "ShotsTableViewCell", bundle: nil), forCellReuseIdentifier: "ShotsCell")
         
     }
 }
 
-extension ShotsViewController: UITableViewDataSource {
+extension ShotsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shotsViewModel?.numberOfShots() ?? 0
     }
@@ -38,5 +39,13 @@ extension ShotsViewController: UITableViewDataSource {
         
         cell.setCell(shot: shot)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let shotDetailViewController = UIStoryboard(name: "ShotDetail", bundle: nil).instantiateViewController(withIdentifier: "ShotDetailViewController") as? ShotDetailViewController {
+            shotDetailViewController.viewModel = ShotDetailViewModel()
+            shotDetailViewController.viewModel?.updateShot((shotsViewModel?.getShot(at: indexPath.row))!)
+            navigationController?.pushViewController(shotDetailViewController, animated: true)
+        }
     }
 }
