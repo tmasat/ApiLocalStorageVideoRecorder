@@ -2,46 +2,111 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="PlayersCell" id="KGk-i7-Jjw" customClass="PlayersTableViewCell" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="PlayersCell" focusStyle="custom" rowHeight="165" id="KGk-i7-Jjw" customClass="PlayersTableViewCell" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="278" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="278" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16H-i1-YLJ" userLabel="Name">
-                        <rect key="frame" x="25" y="11.666666666666664" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fg-a1-Vha" userLabel="Surname">
-                        <rect key="frame" x="92" y="11.666666666666664" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8V-Xr-8IY" userLabel="Player View">
+                        <rect key="frame" x="0.0" y="0.0" width="192" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16H-i1-YLJ" userLabel="Name">
+                                <rect key="frame" x="75" y="12" width="112" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G35-aQ-Ydv" userLabel="Profile Image View">
+                                <rect key="frame" x="15" y="-1" width="50" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWt-JY-3wC" userLabel="Avatar initial label">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZWt-JY-3wC" secondAttribute="trailing" id="Aki-EO-qmN"/>
+                                    <constraint firstAttribute="width" constant="50" id="NPq-rc-nNP"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZWt-JY-3wC" secondAttribute="bottom" id="Tni-5b-Jcb"/>
+                                    <constraint firstItem="ZWt-JY-3wC" firstAttribute="top" secondItem="G35-aQ-Ydv" secondAttribute="top" id="W5y-EJ-9uG"/>
+                                    <constraint firstAttribute="height" constant="50" id="eIx-nd-I4Y"/>
+                                    <constraint firstItem="ZWt-JY-3wC" firstAttribute="leading" secondItem="G35-aQ-Ydv" secondAttribute="leading" id="xZo-Re-MLG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="G35-aQ-Ydv" firstAttribute="leading" secondItem="W8V-Xr-8IY" secondAttribute="leading" constant="15" id="0HR-Ie-CRm"/>
+                            <constraint firstItem="G35-aQ-Ydv" firstAttribute="centerY" secondItem="W8V-Xr-8IY" secondAttribute="centerY" id="1D2-Ld-UHH"/>
+                            <constraint firstItem="16H-i1-YLJ" firstAttribute="leading" secondItem="G35-aQ-Ydv" secondAttribute="trailing" constant="10" id="EyQ-dL-nKo"/>
+                            <constraint firstAttribute="trailing" secondItem="16H-i1-YLJ" secondAttribute="trailing" constant="5" id="GTc-0g-WEs"/>
+                            <constraint firstAttribute="width" secondItem="W8V-Xr-8IY" secondAttribute="height" multiplier="4:1" id="aIm-CV-Rv4"/>
+                            <constraint firstItem="16H-i1-YLJ" firstAttribute="centerY" secondItem="W8V-Xr-8IY" secondAttribute="centerY" id="vCf-cU-a3T"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dk8-PS-PyJ" userLabel="Shot View">
+                        <rect key="frame" x="207" y="0.0" width="48" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2i-hV-cRx">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="M2i-hV-cRx" secondAttribute="bottom" id="1Na-6A-j3F"/>
+                            <constraint firstAttribute="width" secondItem="dk8-PS-PyJ" secondAttribute="height" multiplier="1:1" id="DLs-qX-X83"/>
+                            <constraint firstAttribute="trailing" secondItem="M2i-hV-cRx" secondAttribute="trailing" id="IDO-BH-cIL"/>
+                            <constraint firstItem="M2i-hV-cRx" firstAttribute="top" secondItem="dk8-PS-PyJ" secondAttribute="top" id="cfa-Jc-zDf"/>
+                            <constraint firstItem="M2i-hV-cRx" firstAttribute="leading" secondItem="dk8-PS-PyJ" secondAttribute="leading" id="mYY-d8-oOe"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="16H-i1-YLJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="PEu-hv-qWy"/>
-                    <constraint firstItem="16H-i1-YLJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qfd-MW-V8a"/>
-                    <constraint firstItem="8Fg-a1-Vha" firstAttribute="leading" secondItem="16H-i1-YLJ" secondAttribute="trailing" constant="25" id="jCO-R3-0yx"/>
-                    <constraint firstItem="8Fg-a1-Vha" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zqf-Hs-tnL"/>
+                    <constraint firstAttribute="trailing" secondItem="dk8-PS-PyJ" secondAttribute="trailing" id="33h-zC-vf4"/>
+                    <constraint firstItem="dk8-PS-PyJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Mkn-vG-Hoe"/>
+                    <constraint firstItem="W8V-Xr-8IY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Tj3-zN-BU8"/>
+                    <constraint firstItem="dk8-PS-PyJ" firstAttribute="leading" secondItem="W8V-Xr-8IY" secondAttribute="trailing" constant="15" id="UAx-yM-nHV"/>
+                    <constraint firstAttribute="bottom" secondItem="dk8-PS-PyJ" secondAttribute="bottom" id="YjJ-l5-zRi"/>
+                    <constraint firstItem="W8V-Xr-8IY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cdE-B0-39K"/>
+                    <constraint firstAttribute="bottom" secondItem="W8V-Xr-8IY" secondAttribute="bottom" id="sB2-63-zSu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="avatarInitialLabel" destination="ZWt-JY-3wC" id="zeC-wc-vrw"/>
                 <outlet property="nameLabel" destination="16H-i1-YLJ" id="JZY-wo-oiz"/>
-                <outlet property="surnameLabel" destination="8Fg-a1-Vha" id="KPV-EW-QWm"/>
+                <outlet property="playerView" destination="W8V-Xr-8IY" id="A7H-I5-YvE"/>
+                <outlet property="profileImageView" destination="G35-aQ-Ydv" id="5to-m2-cyT"/>
+                <outlet property="shotLabel" destination="M2i-hV-cRx" id="SI0-99-rfo"/>
+                <outlet property="shotView" destination="dk8-PS-PyJ" id="Bwo-vs-0Ya"/>
             </connections>
-            <point key="canvasLocation" x="-53" y="21"/>
+            <point key="canvasLocation" x="-98.473282442748086" y="-197.18309859154931"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
