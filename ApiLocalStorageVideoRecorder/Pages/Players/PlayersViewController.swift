@@ -11,12 +11,18 @@ class PlayersViewController: UIViewController {
     
     @IBOutlet weak var playersTableView: UITableView!
     private var playersViewModel: PlayersViewModel?
+    @IBOutlet weak var playersLabel: UILabel!
+    @IBOutlet weak var shotsLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
         setTableView()
         setViewModel()
         fetchPlayers()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +50,14 @@ class PlayersViewController: UIViewController {
         playersViewModel?.isUpdateNeeded()
     }
     
-    
+    private func setUI() {
+        self.navigationItem.title = "PLAYER LIST"
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+        playersLabel.font = .boldSystemFont(ofSize: 25)
+        shotsLabel.font = .boldSystemFont(ofSize: 25)
+    }
 }
 
 extension PlayersViewController: UITableViewDataSource, UITableViewDelegate {
@@ -70,9 +83,11 @@ extension PlayersViewController: UITableViewDataSource, UITableViewDelegate {
             shotsViewController.shotsViewModel?.updateShots(player.shots)
             navigationController?.pushViewController(shotsViewController, animated: true)
         }
-        
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
 }
 
