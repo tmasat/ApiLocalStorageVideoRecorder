@@ -11,15 +11,23 @@ import AVFoundation
 class ShotDetailViewController: UIViewController {
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var shotDataView: UIView!
-    @IBOutlet weak var recordButton: UIButton!
-    
-    
+    @IBOutlet weak var recordButton: UIButton!    
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
     @IBOutlet weak var lbl3: UILabel!
     
     var viewModel: ShotDetailViewModel!
     private var player: AVPlayer?
+    
+    var isRecording: Bool = false {
+        didSet {
+            if isRecording {
+                recordButton.setImage(UIImage(systemName: "stop.circle.fill"), for: .normal)
+            } else {
+                recordButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -42,8 +50,6 @@ class ShotDetailViewController: UIViewController {
         
     }
     
-    
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
@@ -51,22 +57,28 @@ class ShotDetailViewController: UIViewController {
     
     @IBAction func recordButtonTapped(_ sender: UIButton) {
         if viewModel.isRecording {
+            self.isRecording = false
             viewModel.stopRecording()
         } else {
+            self.isRecording = true
             shotDataView.isHidden = true
             viewModel.startRecording()
         }
     }
     
-     func setWaterView() {
+
+    
+    func setWaterView() {
         if let shot = viewModel.setShotData() {
             lbl1.text = String(shot.InOut)
             lbl2.text = String(shot.point)
             lbl3.text = String(shot.segment)
         }
-        
-        
     }
+    
+
+    
+    
 }
 
 extension ShotDetailViewController: ShotDetailViewModelDelegate {
@@ -81,7 +93,6 @@ extension ShotDetailViewController: ShotDetailViewModelDelegate {
         
         player?.play()
         shotDataView.isHidden = false
-        
     }
     
     func didFinishRecording(_ videoURL: URL) {
