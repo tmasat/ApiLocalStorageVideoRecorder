@@ -55,8 +55,6 @@ class PlayersViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
-        playersLabel.font = .boldSystemFont(ofSize: 25)
-        shotsLabel.font = .boldSystemFont(ofSize: 25)
     }
 }
 

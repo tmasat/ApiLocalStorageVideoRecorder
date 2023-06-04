@@ -10,12 +10,23 @@ import UIKit
 class ShotsViewController: UIViewController {
     
     @IBOutlet weak var shotsTableView: UITableView!
+    @IBOutlet weak var pointLabel: UILabel!
+    @IBOutlet weak var segmentLabel: UILabel!
+    @IBOutlet weak var inOutLabel: UILabel!
     var shotsViewModel: ShotsViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
         setTableView()
         shotsViewModel?.numberOfShots()
+    }
+    
+    private func setUI() {
+        self.navigationItem.title = "SHOT LIST"
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
     }
     
     private func setTableView() {
@@ -37,7 +48,7 @@ extension ShotsViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        cell.setCell(shot: shot)
+        cell.setCell(with: shot, index: indexPath.row)
         return cell
     }
     
@@ -47,5 +58,9 @@ extension ShotsViewController: UITableViewDataSource, UITableViewDelegate {
             shotDetailViewController.viewModel?.updateShot((shotsViewModel?.getShot(at: indexPath.row))!)
             navigationController?.pushViewController(shotDetailViewController, animated: true)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

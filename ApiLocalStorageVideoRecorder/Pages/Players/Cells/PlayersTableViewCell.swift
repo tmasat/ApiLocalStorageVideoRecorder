@@ -31,7 +31,6 @@ class PlayersTableViewCell: UITableViewCell {
     func setCell(with player: Player) {
         nameLabel.text = "\(player.name) \(player.surname)"
         shotLabel.text = String(player.shots.count)
-        avatarInitialLabel.font = .boldSystemFont(ofSize: 25)
         generateAvatarInitials(name: player.name, surname: player.surname)
     }
     
@@ -39,9 +38,6 @@ class PlayersTableViewCell: UITableViewCell {
         playerView.layer.cornerRadius = 10
         shotView.layer.cornerRadius = 10
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
-        nameLabel.font = .boldSystemFont(ofSize: 20)
-        shotLabel.font = .boldSystemFont(ofSize: 25)
-        
     }
     
     private func generateAvatarInitials(name: String, surname: String) {
