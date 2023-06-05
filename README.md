@@ -1,11 +1,3 @@
-## UNIT TESTS
-PlayersViewModel and ShotsViewModel files have been tested with two unit tests. In these tests, the following functions are tested using the provided mock data:
-- `numberOfShots()`
-- `getShot()`
-- `getPlayer()`
-- `numberOfPlayers()`
-- `updateShots()`
-
 ## Project Structure and Design Pattern
 The project is organized into three main groups, implementing the MVVM (Model-View-ViewModel) design pattern. The groups are as follows:
 - **Pages:** Contains Players, Shots and ShotDetail folders
@@ -14,6 +6,14 @@ The project is organized into three main groups, implementing the MVVM (Model-Vi
   - **ShotsDetail:** Contains ShotDetailViewController, ShotDetailViewModel and ShotDataDetailView
 - **Model:** PlayerModel
 - **Managers:** CoreDataManager, NetworkManager, PlayerManager, UpdatePlayerManager and VideoManager
+
+## UNIT TESTS
+PlayersViewModel and ShotsViewModel files have been tested with two unit tests. In these tests, the following functions are tested using the provided mock data:
+- `numberOfShots()`
+- `getShot()`
+- `getPlayer()`
+- `numberOfPlayers()`
+- `updateShots()`
 
 ## PlayersViewController & PlayersViewModel
 PlayersViewController is responsible for displaying a list of players and their shot counts. It communicates with the CoreDataManager. If there is no player data stored in CoreData, the PlayerManager interacts with the NetworkManager to make a GET request to a specified address and saves the received data into CoreData. Then it populates the UITableViewCell elements with the Player's name, surname and shot count values.
