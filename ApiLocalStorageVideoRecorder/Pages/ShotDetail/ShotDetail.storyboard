@@ -3,7 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,89 +19,83 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG5-Ze-3Yd" userLabel="CameraView">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="772"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGq-Yd-jeU" userLabel="WaterView">
-                                <rect key="frame" x="293" y="0.0" width="100" height="772"/>
+                            <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-7j-uEp">
+                                <rect key="frame" x="255.33333333333337" y="0.0" width="137.66666666666663" height="852"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XXb-YN-8aJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="772"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f7X-xT-5HF">
+                                        <rect key="frame" x="9.9999999999999787" y="10" width="125.66666666666669" height="832"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-eM-sFh">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="257.33333333333331"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icf-5D-ajX">
-                                                <rect key="frame" x="0.0" y="257.33333333333337" width="100" height="257.33333333333337"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loj-pT-IYi">
-                                                <rect key="frame" x="0.0" y="514.66666666666663" width="100" height="257.33333333333337"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6O-18-zj8" userLabel="InOut View" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="160"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceU-SU-4kv" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="168" width="125.66666666666667" height="160"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21O-sY-Bzc" userLabel="Segment View" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="336" width="125.66666666666667" height="160"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ea-0D-qBX" userLabel="PosX View" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="504" width="125.66666666666667" height="160"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2C-Wv-ZKw" userLabel="PosY View" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="672" width="125.66666666666667" height="160"/>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="5bP-Z5-EB6"/>
-                                    <constraint firstItem="XXb-YN-8aJ" firstAttribute="top" secondItem="AGq-Yd-jeU" secondAttribute="top" id="L8z-JV-DqT"/>
-                                    <constraint firstAttribute="bottom" secondItem="XXb-YN-8aJ" secondAttribute="bottom" id="cnA-Hu-xz0"/>
-                                    <constraint firstItem="XXb-YN-8aJ" firstAttribute="leading" secondItem="AGq-Yd-jeU" secondAttribute="leading" id="ehK-In-2mg"/>
-                                    <constraint firstAttribute="trailing" secondItem="XXb-YN-8aJ" secondAttribute="trailing" id="plZ-M0-dYS"/>
+                                    <constraint firstAttribute="trailing" secondItem="f7X-xT-5HF" secondAttribute="trailing" constant="2" id="2RP-FW-VDH"/>
+                                    <constraint firstAttribute="bottom" secondItem="f7X-xT-5HF" secondAttribute="bottom" constant="10" id="9Hj-Aj-Rgq"/>
+                                    <constraint firstItem="f7X-xT-5HF" firstAttribute="top" secondItem="iOT-7j-uEp" secondAttribute="top" constant="10" id="Xgj-nx-1z7"/>
+                                    <constraint firstItem="f7X-xT-5HF" firstAttribute="leading" secondItem="iOT-7j-uEp" secondAttribute="leading" constant="10" id="bQs-bL-FKV"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="pse-LT-EvV"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZu-0r-iwz" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="772" width="393" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCy-Xg-0Kn">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="RECORD"/>
-                                        <connections>
-                                            <action selector="recordButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c5k-dQ-Peg"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCy-Xg-0Kn">
+                                <rect key="frame" x="146.66666666666666" y="692" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="NCy-Xg-0Kn" secondAttribute="bottom" id="8vs-bo-djd"/>
-                                    <constraint firstItem="NCy-Xg-0Kn" firstAttribute="leading" secondItem="OZu-0r-iwz" secondAttribute="leading" id="TYW-6b-Bjz"/>
-                                    <constraint firstAttribute="height" constant="80" id="Tjp-FI-bit"/>
-                                    <constraint firstAttribute="trailing" secondItem="NCy-Xg-0Kn" secondAttribute="trailing" id="UP4-8z-Axn"/>
-                                    <constraint firstItem="NCy-Xg-0Kn" firstAttribute="top" secondItem="OZu-0r-iwz" secondAttribute="top" id="f5I-71-Mqm"/>
+                                    <constraint firstAttribute="width" constant="100" id="KJg-gL-XcO"/>
+                                    <constraint firstAttribute="height" constant="100" id="OLI-0B-o5z"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="play.circle.fill" catalog="system" symbolScale="medium"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="70"/>
+                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c5k-dQ-Peg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="OZu-0r-iwz" secondAttribute="bottom" id="8h6-7o-ACS"/>
-                            <constraint firstItem="OZu-0r-iwz" firstAttribute="top" secondItem="UG5-Ze-3Yd" secondAttribute="bottom" id="BEF-pG-Yct"/>
+                            <constraint firstAttribute="bottom" secondItem="iOT-7j-uEp" secondAttribute="bottom" id="3Yo-cL-2Bj"/>
+                            <constraint firstItem="NCy-Xg-0Kn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Him-88-BZv"/>
                             <constraint firstItem="UG5-Ze-3Yd" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PCV-PG-26I"/>
-                            <constraint firstItem="OZu-0r-iwz" firstAttribute="top" secondItem="AGq-Yd-jeU" secondAttribute="bottom" id="QLK-tf-YIT"/>
+                            <constraint firstItem="iOT-7j-uEp" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Pay-Ad-ec4"/>
                             <constraint firstAttribute="trailing" secondItem="UG5-Ze-3Yd" secondAttribute="trailing" id="UkW-T9-efQ"/>
+                            <constraint firstAttribute="bottom" secondItem="NCy-Xg-0Kn" secondAttribute="bottom" constant="60" id="V18-Y7-RVb"/>
+                            <constraint firstAttribute="bottom" secondItem="UG5-Ze-3Yd" secondAttribute="bottom" id="X20-AS-Hl5"/>
                             <constraint firstItem="UG5-Ze-3Yd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Xhv-0h-oUk"/>
-                            <constraint firstAttribute="trailing" secondItem="OZu-0r-iwz" secondAttribute="trailing" id="b3g-0u-rDe"/>
-                            <constraint firstItem="AGq-Yd-jeU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="fNP-mZ-nga"/>
-                            <constraint firstAttribute="trailing" secondItem="AGq-Yd-jeU" secondAttribute="trailing" id="ja9-Nt-MfT"/>
-                            <constraint firstItem="OZu-0r-iwz" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="tl5-vH-mJv"/>
+                            <constraint firstItem="iOT-7j-uEp" firstAttribute="width" secondItem="UG5-Ze-3Yd" secondAttribute="width" multiplier="0.35" id="qHd-79-cs1"/>
+                            <constraint firstAttribute="trailing" secondItem="iOT-7j-uEp" secondAttribute="trailing" id="zUS-0g-imF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="UG5-Ze-3Yd" id="Nxd-DV-tUx"/>
-                        <outlet property="lbl1" destination="2qu-eM-sFh" id="Orv-u8-oUv"/>
-                        <outlet property="lbl2" destination="icf-5D-ajX" id="WmL-Qs-n4J"/>
-                        <outlet property="lbl3" destination="loj-pT-IYi" id="wa2-It-hbg"/>
+                        <outlet property="inOutView" destination="Y6O-18-zj8" id="Jgx-mk-UKR"/>
+                        <outlet property="pointView" destination="ceU-SU-4kv" id="Kdt-Os-vU3"/>
+                        <outlet property="posXView" destination="9ea-0D-qBX" id="P3L-BH-1SL"/>
+                        <outlet property="posYView" destination="d2C-Wv-ZKw" id="tKg-dQ-mof"/>
                         <outlet property="recordButton" destination="NCy-Xg-0Kn" id="oW2-bJ-DaE"/>
-                        <outlet property="shotDataView" destination="AGq-Yd-jeU" id="GUp-XW-eIZ"/>
+                        <outlet property="segmentView" destination="21O-sY-Bzc" id="5EB-fd-MEs"/>
+                        <outlet property="shotDataView" destination="iOT-7j-uEp" id="IYs-gb-EjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
