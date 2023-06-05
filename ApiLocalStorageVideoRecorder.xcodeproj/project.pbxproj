@@ -29,11 +29,23 @@
 		421375692A28282B003CB81B /* UpdatePlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421375682A28282B003CB81B /* UpdatePlayerManager.swift */; };
 		4270C3662A2D09FD00831FBF /* ShotDataDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270C3652A2D09FD00831FBF /* ShotDataDetailView.swift */; };
 		4270C3682A2D0A0E00831FBF /* ShotDataDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4270C3672A2D0A0E00831FBF /* ShotDataDetailView.xib */; };
+		4270C37C2A2D9C1800831FBF /* ShotsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270C37B2A2D9C1800831FBF /* ShotsViewModelTests.swift */; };
+		4270C37E2A2D9D7100831FBF /* PlayersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270C37D2A2D9D7100831FBF /* PlayersViewModelTests.swift */; };
 		42FA0D8C2A28DDC500B30337 /* ShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA0D8B2A28DDC500B30337 /* ShotDetailViewController.swift */; };
 		42FA0D8E2A28DEF300B30337 /* ShotDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA0D8D2A28DEF300B30337 /* ShotDetailViewModel.swift */; };
 		42FA0D902A28DF0800B30337 /* ShotDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FA0D8F2A28DF0800B30337 /* ShotDetail.storyboard */; };
 		42FA0D922A29730100B30337 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA0D912A29730100B30337 /* VideoManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4270C3762A2D9BFD00831FBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4213752D2A27A58E003CB81B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 421375342A27A58E003CB81B;
+			remoteInfo = ApiLocalStorageVideoRecorder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		420CA9A82A28521300D98FE1 /* ShotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +72,9 @@
 		421375682A28282B003CB81B /* UpdatePlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePlayerManager.swift; sourceTree = "<group>"; };
 		4270C3652A2D09FD00831FBF /* ShotDataDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDataDetailView.swift; sourceTree = "<group>"; };
 		4270C3672A2D0A0E00831FBF /* ShotDataDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShotDataDetailView.xib; sourceTree = "<group>"; };
+		4270C3722A2D9BFD00831FBF /* ApiLocalStorageVideoRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApiLocalStorageVideoRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4270C37B2A2D9C1800831FBF /* ShotsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsViewModelTests.swift; sourceTree = "<group>"; };
+		4270C37D2A2D9D7100831FBF /* PlayersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModelTests.swift; sourceTree = "<group>"; };
 		42FA0D8B2A28DDC500B30337 /* ShotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDetailViewController.swift; sourceTree = "<group>"; };
 		42FA0D8D2A28DEF300B30337 /* ShotDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDetailViewModel.swift; sourceTree = "<group>"; };
 		42FA0D8F2A28DF0800B30337 /* ShotDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShotDetail.storyboard; sourceTree = "<group>"; };
@@ -68,6 +83,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		421375322A27A58E003CB81B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4270C36F2A2D9BFD00831FBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				421375372A27A58E003CB81B /* ApiLocalStorageVideoRecorder */,
+				4270C3732A2D9BFD00831FBF /* ApiLocalStorageVideoRecorderTests */,
 				421375362A27A58E003CB81B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				421375352A27A58E003CB81B /* ApiLocalStorageVideoRecorder.app */,
+				4270C3722A2D9BFD00831FBF /* ApiLocalStorageVideoRecorderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +212,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4270C3732A2D9BFD00831FBF /* ApiLocalStorageVideoRecorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				4270C37B2A2D9C1800831FBF /* ShotsViewModelTests.swift */,
+				4270C37D2A2D9D7100831FBF /* PlayersViewModelTests.swift */,
+			);
+			path = ApiLocalStorageVideoRecorderTests;
+			sourceTree = "<group>";
+		};
 		42FA0D8A2A28D4C400B30337 /* ShotDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +252,24 @@
 			productReference = 421375352A27A58E003CB81B /* ApiLocalStorageVideoRecorder.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4270C3712A2D9BFD00831FBF /* ApiLocalStorageVideoRecorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4270C37A2A2D9BFD00831FBF /* Build configuration list for PBXNativeTarget "ApiLocalStorageVideoRecorderTests" */;
+			buildPhases = (
+				4270C36E2A2D9BFD00831FBF /* Sources */,
+				4270C36F2A2D9BFD00831FBF /* Frameworks */,
+				4270C3702A2D9BFD00831FBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4270C3772A2D9BFD00831FBF /* PBXTargetDependency */,
+			);
+			name = ApiLocalStorageVideoRecorderTests;
+			productName = ApiLocalStorageVideoRecorderTests;
+			productReference = 4270C3722A2D9BFD00831FBF /* ApiLocalStorageVideoRecorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,6 +282,10 @@
 				TargetAttributes = {
 					421375342A27A58E003CB81B = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					4270C3712A2D9BFD00831FBF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 421375342A27A58E003CB81B;
 					};
 				};
 			};
@@ -248,6 +303,7 @@
 			projectRoot = "";
 			targets = (
 				421375342A27A58E003CB81B /* ApiLocalStorageVideoRecorder */,
+				4270C3712A2D9BFD00831FBF /* ApiLocalStorageVideoRecorderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -265,6 +321,13 @@
 				4270C3682A2D0A0E00831FBF /* ShotDataDetailView.xib in Resources */,
 				421375452A27A590003CB81B /* Assets.xcassets in Resources */,
 				420CA9B22A28C8AC00D98FE1 /* ShotsTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4270C3702A2D9BFD00831FBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +359,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4270C36E2A2D9BFD00831FBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4270C37C2A2D9C1800831FBF /* ShotsViewModelTests.swift in Sources */,
+				4270C37E2A2D9D7100831FBF /* PlayersViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4270C3772A2D9BFD00831FBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 421375342A27A58E003CB81B /* ApiLocalStorageVideoRecorder */;
+			targetProxy = 4270C3762A2D9BFD00831FBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		421375462A27A590003CB81B /* LaunchScreen.storyboard */ = {
@@ -484,6 +564,42 @@
 			};
 			name = Release;
 		};
+		4270C3782A2D9BFD00831FBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UCYVYPJTR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tugberkmasat.ApiLocalStorageVideoRecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ApiLocalStorageVideoRecorder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ApiLocalStorageVideoRecorder";
+			};
+			name = Debug;
+		};
+		4270C3792A2D9BFD00831FBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8UCYVYPJTR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tugberkmasat.ApiLocalStorageVideoRecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ApiLocalStorageVideoRecorder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ApiLocalStorageVideoRecorder";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,6 +617,15 @@
 			buildConfigurations = (
 				4213754D2A27A590003CB81B /* Debug */,
 				4213754E2A27A590003CB81B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4270C37A2A2D9BFD00831FBF /* Build configuration list for PBXNativeTarget "ApiLocalStorageVideoRecorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4270C3782A2D9BFD00831FBF /* Debug */,
+				4270C3792A2D9BFD00831FBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

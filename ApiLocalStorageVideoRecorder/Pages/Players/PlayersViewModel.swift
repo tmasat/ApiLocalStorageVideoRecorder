@@ -13,7 +13,7 @@ protocol PlayersViewModelDelegate: AnyObject {
 
 class PlayersViewModel {
     private let coreDataManager: CoreDataManager
-    private var players: [Player] = []
+    var players: [Player] = []
     weak var delegate: PlayersViewModelDelegate?
     private let updatePlayerManager = UpdatePlayerManager(coreDataManager: CoreDataManager(), playerManager: PlayerManager())
     
@@ -23,7 +23,6 @@ class PlayersViewModel {
     
     
     func isUpdateNeeded() {
-        
         guard self.players.count == 0 else { return }
         
         updatePlayerManager.updatePlayers {
