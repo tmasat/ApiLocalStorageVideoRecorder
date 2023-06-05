@@ -8,7 +8,7 @@ The project is organized into three main groups, implementing the MVVM (Model-Vi
 - **Managers:** CoreDataManager, NetworkManager, PlayerManager, UpdatePlayerManager and VideoManager
 
 ## UNIT TESTS
-PlayersViewModel and ShotsViewModel files have been tested with two unit tests. In these tests, the following functions are tested using the provided mock data:
+PlayersViewModel and ShotsViewModel have been tested with two unit test files. In these tests, the following functions are tested using the provided mock data:
 - `numberOfShots()`
 - `getShot()`
 - `getPlayer()`
@@ -24,7 +24,7 @@ PlayersViewController is responsible for displaying a list of players and their 
 <br>
 
 ## ShotsViewController & ShotsViewModel
-ShotsViewController is connected to the TableView on the PlayersViewController page. When a cell is tapped, it navigates to the ShotsViewController page and displays the shot data for the selected player. The UITableViewCell elements are populated with the relevant shot information.
+ShotsViewController is connected to the TableView on the PlayersViewController page. When a cell is tapped, it navigates to the ShotsViewController page and displays the shot data for the selected player. The UITableViewCell elements are populated with the relevant shot information. Shots are sorted according to the shot's point value. <br> **Note:** If there are more than 2 shots with equal point values, the row order shown may changed.
 <br>
 <br>
 ![](images/shots.jpeg)
