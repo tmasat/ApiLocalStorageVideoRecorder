@@ -72,7 +72,6 @@ class ShotDetailViewController: UIViewController {
             segmentView.setData(name: "SEGMENT", value: String(shot.segment))
             posXView.setData(name: "POSX", value: String(format: "%.2f", shot.ShotPosX))
             posYView.setData(name: "POSY", value: String(format: "%.2f", shot.ShotPosY))
-
         }
     }
     
@@ -96,6 +95,5 @@ extension ShotDetailViewController: ShotDetailViewModelDelegate {
         viewModel.saveVideoToDocumentsFolder(videoURL)
         playVideo(videoURL)
     }
-    
     
 }
