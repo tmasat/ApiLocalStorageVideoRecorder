@@ -14,8 +14,6 @@ class PlayersViewController: UIViewController {
     @IBOutlet weak var playersLabel: UILabel!
     @IBOutlet weak var shotsLabel: UILabel!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()

@@ -17,8 +17,6 @@ class PlayersTableViewCell: UITableViewCell {
 
     @IBOutlet weak var shotLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var surnameLabel: UILabel!
-    
     @IBOutlet weak var avatarInitialLabel: UILabel!
     @IBOutlet weak var playerView: UIView!
     @IBOutlet weak var shotView: UIView!
