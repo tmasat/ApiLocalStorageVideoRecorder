@@ -23,7 +23,7 @@ class UpdatePlayerManager {
                 self.coreDataManager.savePlayersAndShots(players: players)
                 completion()
             case .failure(let error):
-                print("Error on UpdatePlayerManager -> UpdatePlayers: \(error)")
+                print("Failed to update players: \(error)")
                 completion()
             }
         }
