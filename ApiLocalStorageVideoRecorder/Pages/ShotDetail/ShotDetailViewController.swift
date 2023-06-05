@@ -9,12 +9,16 @@ import UIKit
 import AVFoundation
 
 class ShotDetailViewController: UIViewController {
+    //CUSTOM VIEW OUTLETS
+    @IBOutlet weak var inOutView: ShotDataDetailView!
+    @IBOutlet weak var pointView: ShotDataDetailView!
+    @IBOutlet weak var segmentView: ShotDataDetailView!
+    @IBOutlet weak var posXView: ShotDataDetailView!
+    @IBOutlet weak var posYView: ShotDataDetailView!
+    
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var shotDataView: UIView!
-    @IBOutlet weak var recordButton: UIButton!    
-    @IBOutlet weak var lbl1: UILabel!
-    @IBOutlet weak var lbl2: UILabel!
-    @IBOutlet weak var lbl3: UILabel!
     
     var viewModel: ShotDetailViewModel!
     private var player: AVPlayer?
@@ -50,11 +54,6 @@ class ShotDetailViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-    }
-    
     @IBAction func recordButtonTapped(_ sender: UIButton) {
         if viewModel.isRecording {
             self.isRecording = false
@@ -66,18 +65,16 @@ class ShotDetailViewController: UIViewController {
         }
     }
     
-
-    
     func setWaterView() {
         if let shot = viewModel.setShotData() {
-            lbl1.text = String(shot.InOut)
-            lbl2.text = String(shot.point)
-            lbl3.text = String(shot.segment)
+            inOutView.setData(name: "IN/OUT", value: String(shot.InOut))
+            pointView.setData(name: "POINT", value: String(shot.point))
+            segmentView.setData(name: "SEGMENT", value: String(shot.segment))
+            posXView.setData(name: "POSX", value: String(format: "%.2f", shot.ShotPosX))
+            posYView.setData(name: "POSY", value: String(format: "%.2f", shot.ShotPosY))
+
         }
     }
-    
-
-    
     
 }
 

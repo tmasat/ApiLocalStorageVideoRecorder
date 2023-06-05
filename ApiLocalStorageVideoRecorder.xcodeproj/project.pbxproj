@@ -27,6 +27,8 @@
 		421375662A27FF64003CB81B /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421375642A27FF64003CB81B /* PlayersTableViewCell.swift */; };
 		421375672A27FF64003CB81B /* PlayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 421375652A27FF64003CB81B /* PlayersTableViewCell.xib */; };
 		421375692A28282B003CB81B /* UpdatePlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421375682A28282B003CB81B /* UpdatePlayerManager.swift */; };
+		4270C3662A2D09FD00831FBF /* ShotDataDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4270C3652A2D09FD00831FBF /* ShotDataDetailView.swift */; };
+		4270C3682A2D0A0E00831FBF /* ShotDataDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4270C3672A2D0A0E00831FBF /* ShotDataDetailView.xib */; };
 		42FA0D8C2A28DDC500B30337 /* ShotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA0D8B2A28DDC500B30337 /* ShotDetailViewController.swift */; };
 		42FA0D8E2A28DEF300B30337 /* ShotDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FA0D8D2A28DEF300B30337 /* ShotDetailViewModel.swift */; };
 		42FA0D902A28DF0800B30337 /* ShotDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FA0D8F2A28DF0800B30337 /* ShotDetail.storyboard */; };
@@ -56,6 +58,8 @@
 		421375642A27FF64003CB81B /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		421375652A27FF64003CB81B /* PlayersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersTableViewCell.xib; sourceTree = "<group>"; };
 		421375682A28282B003CB81B /* UpdatePlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePlayerManager.swift; sourceTree = "<group>"; };
+		4270C3652A2D09FD00831FBF /* ShotDataDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDataDetailView.swift; sourceTree = "<group>"; };
+		4270C3672A2D0A0E00831FBF /* ShotDataDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShotDataDetailView.xib; sourceTree = "<group>"; };
 		42FA0D8B2A28DDC500B30337 /* ShotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDetailViewController.swift; sourceTree = "<group>"; };
 		42FA0D8D2A28DEF300B30337 /* ShotDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDetailViewModel.swift; sourceTree = "<group>"; };
 		42FA0D8F2A28DF0800B30337 /* ShotDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShotDetail.storyboard; sourceTree = "<group>"; };
@@ -112,7 +116,6 @@
 		421375372A27A58E003CB81B /* ApiLocalStorageVideoRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				421375592A27C366003CB81B /* CoreData */,
 				421375582A27C248003CB81B /* Pages */,
 				421375552A27B854003CB81B /* Managers */,
 				421375522A27AED8003CB81B /* Model */,
@@ -137,6 +140,7 @@
 		421375552A27B854003CB81B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4213755A2A27C37D003CB81B /* CoreDataManager.swift */,
 				421375502A27AD45003CB81B /* NetworkManager.swift */,
 				421375562A27B86C003CB81B /* PlayerManager.swift */,
 				421375682A28282B003CB81B /* UpdatePlayerManager.swift */,
@@ -153,14 +157,6 @@
 				4213755C2A27FAC9003CB81B /* Players */,
 			);
 			path = Pages;
-			sourceTree = "<group>";
-		};
-		421375592A27C366003CB81B /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				4213755A2A27C37D003CB81B /* CoreDataManager.swift */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		4213755C2A27FAC9003CB81B /* Players */ = {
@@ -183,9 +179,19 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4270C3642A2CFF2A00831FBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4270C3652A2D09FD00831FBF /* ShotDataDetailView.swift */,
+				4270C3672A2D0A0E00831FBF /* ShotDataDetailView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		42FA0D8A2A28D4C400B30337 /* ShotDetail */ = {
 			isa = PBXGroup;
 			children = (
+				4270C3642A2CFF2A00831FBF /* Views */,
 				42FA0D8B2A28DDC500B30337 /* ShotDetailViewController.swift */,
 				42FA0D8D2A28DEF300B30337 /* ShotDetailViewModel.swift */,
 				42FA0D8F2A28DF0800B30337 /* ShotDetail.storyboard */,
@@ -256,6 +262,7 @@
 				421375622A27FE4B003CB81B /* Players.storyboard in Resources */,
 				42FA0D902A28DF0800B30337 /* ShotDetail.storyboard in Resources */,
 				420CA9AD2A28523A00D98FE1 /* Shots.storyboard in Resources */,
+				4270C3682A2D0A0E00831FBF /* ShotDataDetailView.xib in Resources */,
 				421375452A27A590003CB81B /* Assets.xcassets in Resources */,
 				420CA9B22A28C8AC00D98FE1 /* ShotsTableViewCell.xib in Resources */,
 			);
@@ -275,6 +282,7 @@
 				421375432A27A58E003CB81B /* ApiLocalStorageVideoRecorder.xcdatamodeld in Sources */,
 				421375572A27B86C003CB81B /* PlayerManager.swift in Sources */,
 				421375512A27AD45003CB81B /* NetworkManager.swift in Sources */,
+				4270C3662A2D09FD00831FBF /* ShotDataDetailView.swift in Sources */,
 				421375392A27A58E003CB81B /* AppDelegate.swift in Sources */,
 				4213755B2A27C37D003CB81B /* CoreDataManager.swift in Sources */,
 				42FA0D922A29730100B30337 /* VideoManager.swift in Sources */,

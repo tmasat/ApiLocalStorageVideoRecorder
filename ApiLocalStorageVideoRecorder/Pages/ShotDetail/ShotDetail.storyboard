@@ -22,40 +22,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGq-Yd-jeU" userLabel="WaterView">
-                                <rect key="frame" x="293" y="0.0" width="100" height="852"/>
+                            <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-7j-uEp">
+                                <rect key="frame" x="255.33333333333337" y="0.0" width="137.66666666666663" height="852"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XXb-YN-8aJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="852"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f7X-xT-5HF">
+                                        <rect key="frame" x="9.9999999999999787" y="10" width="125.66666666666669" height="832"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qu-eM-sFh">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="284"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icf-5D-ajX">
-                                                <rect key="frame" x="0.0" y="284" width="100" height="284"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loj-pT-IYi">
-                                                <rect key="frame" x="0.0" y="568" width="100" height="284"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6O-18-zj8" userLabel="InOut View" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="160"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceU-SU-4kv" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="168" width="125.66666666666667" height="160"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21O-sY-Bzc" userLabel="Segment View" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="336" width="125.66666666666667" height="160"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ea-0D-qBX" userLabel="PosX View" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="504" width="125.66666666666667" height="160"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2C-Wv-ZKw" userLabel="PosY View" customClass="ShotDataDetailView" customModule="ApiLocalStorageVideoRecorder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="672" width="125.66666666666667" height="160"/>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="5bP-Z5-EB6"/>
-                                    <constraint firstItem="XXb-YN-8aJ" firstAttribute="top" secondItem="AGq-Yd-jeU" secondAttribute="top" id="L8z-JV-DqT"/>
-                                    <constraint firstAttribute="bottom" secondItem="XXb-YN-8aJ" secondAttribute="bottom" id="cnA-Hu-xz0"/>
-                                    <constraint firstItem="XXb-YN-8aJ" firstAttribute="leading" secondItem="AGq-Yd-jeU" secondAttribute="leading" id="ehK-In-2mg"/>
-                                    <constraint firstAttribute="trailing" secondItem="XXb-YN-8aJ" secondAttribute="trailing" id="plZ-M0-dYS"/>
+                                    <constraint firstAttribute="trailing" secondItem="f7X-xT-5HF" secondAttribute="trailing" constant="2" id="2RP-FW-VDH"/>
+                                    <constraint firstAttribute="bottom" secondItem="f7X-xT-5HF" secondAttribute="bottom" constant="10" id="9Hj-Aj-Rgq"/>
+                                    <constraint firstItem="f7X-xT-5HF" firstAttribute="top" secondItem="iOT-7j-uEp" secondAttribute="top" constant="10" id="Xgj-nx-1z7"/>
+                                    <constraint firstItem="f7X-xT-5HF" firstAttribute="leading" secondItem="iOT-7j-uEp" secondAttribute="leading" constant="10" id="bQs-bL-FKV"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="pse-LT-EvV"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCy-Xg-0Kn">
@@ -78,24 +75,27 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="AGq-Yd-jeU" secondAttribute="bottom" id="4NA-83-fa5"/>
+                            <constraint firstAttribute="bottom" secondItem="iOT-7j-uEp" secondAttribute="bottom" id="3Yo-cL-2Bj"/>
                             <constraint firstItem="NCy-Xg-0Kn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Him-88-BZv"/>
                             <constraint firstItem="UG5-Ze-3Yd" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PCV-PG-26I"/>
+                            <constraint firstItem="iOT-7j-uEp" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Pay-Ad-ec4"/>
                             <constraint firstAttribute="trailing" secondItem="UG5-Ze-3Yd" secondAttribute="trailing" id="UkW-T9-efQ"/>
                             <constraint firstAttribute="bottom" secondItem="NCy-Xg-0Kn" secondAttribute="bottom" constant="60" id="V18-Y7-RVb"/>
                             <constraint firstAttribute="bottom" secondItem="UG5-Ze-3Yd" secondAttribute="bottom" id="X20-AS-Hl5"/>
                             <constraint firstItem="UG5-Ze-3Yd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Xhv-0h-oUk"/>
-                            <constraint firstItem="AGq-Yd-jeU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="fNP-mZ-nga"/>
-                            <constraint firstAttribute="trailing" secondItem="AGq-Yd-jeU" secondAttribute="trailing" id="ja9-Nt-MfT"/>
+                            <constraint firstItem="iOT-7j-uEp" firstAttribute="width" secondItem="UG5-Ze-3Yd" secondAttribute="width" multiplier="0.35" id="qHd-79-cs1"/>
+                            <constraint firstAttribute="trailing" secondItem="iOT-7j-uEp" secondAttribute="trailing" id="zUS-0g-imF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="UG5-Ze-3Yd" id="Nxd-DV-tUx"/>
-                        <outlet property="lbl1" destination="2qu-eM-sFh" id="Orv-u8-oUv"/>
-                        <outlet property="lbl2" destination="icf-5D-ajX" id="WmL-Qs-n4J"/>
-                        <outlet property="lbl3" destination="loj-pT-IYi" id="wa2-It-hbg"/>
+                        <outlet property="inOutView" destination="Y6O-18-zj8" id="Jgx-mk-UKR"/>
+                        <outlet property="pointView" destination="ceU-SU-4kv" id="Kdt-Os-vU3"/>
+                        <outlet property="posXView" destination="9ea-0D-qBX" id="P3L-BH-1SL"/>
+                        <outlet property="posYView" destination="d2C-Wv-ZKw" id="tKg-dQ-mof"/>
                         <outlet property="recordButton" destination="NCy-Xg-0Kn" id="oW2-bJ-DaE"/>
-                        <outlet property="shotDataView" destination="AGq-Yd-jeU" id="GUp-XW-eIZ"/>
+                        <outlet property="segmentView" destination="21O-sY-Bzc" id="5EB-fd-MEs"/>
+                        <outlet property="shotDataView" destination="iOT-7j-uEp" id="IYs-gb-EjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
